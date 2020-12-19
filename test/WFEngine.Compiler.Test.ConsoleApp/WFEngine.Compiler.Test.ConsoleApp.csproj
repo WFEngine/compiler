@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\WFEngine.Compiler\WFEngine.Compiler.csproj" />
+    <ProjectReference Include="..\..\src\WFEngine.Compiler\WFEngine.Compiler.csproj" />
   </ItemGroup>
 
 </Project>
