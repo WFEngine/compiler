@@ -1,0 +1,60 @@
+{
+  "Solution": {
+    "UniqueKey": "f0ce7843-de58-4953-af01-7c167c06bd69",
+    "OrganizationName": "WFEngine First Organization",
+    "Name": "WFEngine Console ReadLine Application",
+    "Description": "WFEngine Console ReadLine Application Description",
+    "Projects": [
+      {
+        "UniqueKey": "b40411ea-8eb5-40d6-8100-7c54d6fa9904",
+        "Name": "WFEngine Console ReadLine Application",
+        "Description": "",
+        "ProjectType": "Console",
+        "Workflows": [
+          {
+            "UniqueKey": "eb6e253e-375b-44e6-92ff-a02c52f42973",
+            "Name": "Console.ReadLine",
+            "Description": "Console.ReadLine",
+            "Constants": [],
+            "Blocks": [
+              {
+                "Name": "Container",
+                "IsContainer": "true",
+                "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                "ActivityName": "WFEngine.Activities.Basic.Container",
+                "Variables": [
+                  {
+                    "UniqueKey": "6cd72d75-2b33-4665-b6e7-cf28dd0aa80b",
+                    "Name": "name",
+                    "Type": "System.String",
+                    "IsVariable": true,
+                    "Value": ""
+                  }
+                ],
+                "Arguments": [],
+                "Blocks": [
+                  {
+                    "Name": "Console.ReadLine",
+                    "AssemblyName": "WFEngine.Activities.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "ActivityName": "WFEngine.Activities.Console.ReadLine",
+                    "Arguments": [
+                      {
+                        "Name": "ReturnValue",
+                        "ArgumentType": "System.String",
+                        "IsVariable": true,
+                        "IsConstant": false,
+                        "Value": [
+                          "$name"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
