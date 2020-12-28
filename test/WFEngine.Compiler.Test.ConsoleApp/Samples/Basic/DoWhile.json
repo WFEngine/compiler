@@ -1,0 +1,131 @@
+{
+  "Solution": {
+    "UniqueKey": "f0ce7843-de58-4953-af01-7c167c06bd69",
+    "OrganizationName": "WFEngine First Organization",
+    "Name": "WFEngine First Console App",
+    "Description": "WFEngine First Console App Description",
+    "Projects": [
+      {
+        "UniqueKey": "b40411ea-8eb5-40d6-8100-7c54d6fa9904",
+        "Name": "Hello World App",
+        "Description": "",
+        "ProjectType": "Console",
+        "Workflows": [
+          {
+            "UniqueKey": "eb6e253e-375b-44e6-92ff-a02c52f42973",
+            "Name": "While Loop",
+            "Description": "While Loop",
+            "Constants": [],
+            "Blocks": [
+              {
+                "Name": "Container",
+                "IsContainer": "true",
+                "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                "ActivityName": "WFEngine.Activities.Basic.Container",
+                "Variables": [
+                  {
+                    "UniqueKey": "6cd72d75-2b33-4665-b6e7-cf28dd0aa80b",
+                    "Name": "counter",
+                    "Type": "System.Int32",
+                    "IsVariable": true,
+                    "Value": []
+                  }
+                ],
+                "Arguments": [],
+                "Blocks": [
+                  {
+                    "Name": "Assign Example",
+                    "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "ActivityName": "WFEngine.Activities.Basic.Assign",
+                    "Arguments": [
+                      {
+                        "Name": "counter",
+                        "ArgumentType": "System.Int32",
+                        "IsVariable": false,
+                        "IsConstant": false,
+                        "Value": [
+                          1
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "Do While",
+                    "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "ActivityName": "WFEngine.Activities.Basic.DoWhile",
+                    "Arguments": [
+                      {
+                        "Name": "Condition",
+                        "ArgumentType": "WFEngine.Activities.Basic.Condition.ConditionItem",
+                        "IsVariable": false,
+                        "IsConstant": false,
+                        "Value": [
+                          {
+                            "LeftItem": {
+                              "Name": "LeftItem",
+                              "ArgumentType": "System.Int32",
+                              "IsVariable": true,
+                              "IsConstant": false,
+                              "Value": [
+                                "$counter"
+                              ]
+                            },
+                            "RightItem": {
+                              "Name": "LeftItem",
+                              "ArgumentType": "System.Int32",
+                              "IsVariable": false,
+                              "IsConstant": false,
+                              "IsValue": true,
+                              "Value": [
+                                10
+                              ]
+                            },
+                            "Operator": "Is Less Than Or Equal To"
+                          }
+                        ]
+                      }
+                    ],
+                    "Blocks": [
+                      {
+                        "Name": "Console.WriteLine",
+                        "AssemblyName": "WFEngine.Activities.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                        "ActivityName": "WFEngine.Activities.Console.WriteLine",
+                        "Arguments": [
+                          {
+                            "Name": "Message",
+                            "ArgumentType": "System.String",
+                            "IsVariable": false,
+                            "IsConstant": false,
+                            "Value": [
+                              "$counter"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "Name": "Assign Example",
+                        "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                        "ActivityName": "WFEngine.Activities.Basic.Assign",
+                        "Arguments": [
+                          {
+                            "Name": "counter",
+                            "ArgumentType": "System.Int32",
+                            "IsVariable": false,
+                            "IsConstant": false,
+                            "Value": [
+                              "$counter+1"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
