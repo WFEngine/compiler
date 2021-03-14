@@ -20,8 +20,7 @@ namespace WFEngine.Compiler
 
         private void Run()
         {
-            string currentDirectory = Directory.GetCurrentDirectory();
-            string workflowsDirectory = $"{currentDirectory}/{FileName}";
+            string workflowsDirectory = $"{FileName}";
             if (!File.Exists(workflowsDirectory))
                 return;
             IWFCompiler compiler = new WFCompiler();
