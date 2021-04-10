@@ -12,20 +12,20 @@
         "ProjectType": "Console",
         "Workflows": [
           {
-            "UniqueKey": "1bdab4bc-cac6-43b0-8df4-d636519f606c",
-            "Name": "IF Test",
+            "UniqueKey": "e5e991d8-714f-436b-b9dc-776df24cbd48",
+            "Name": "While",
             "Description": "",
             "Blocks": [
               {
-                "UniqueKey": "bf5064c7-2635-4579-9c90-b12d1bdd161f",
+                "UniqueKey": "4d7ec022-dd63-426b-a80c-1dc4ea1abded",
                 "Name": "WFEngine.Activities.Basic.Container",
                 "IsContainer": true,
                 "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "ActivityName": "WFEngine.Activities.Basic.Container",
                 "Variables": [
                   {
-                    "UniqueKey": "7bf38e9b-df0b-42a4-a77b-2a26f3605aee",
-                    "Name": "age",
+                    "UniqueKey": "f10ff279-62d2-4ea2-ba21-a188a3e4b727",
+                    "Name": "counter",
                     "Type": "System.Int32",
                     "IsVariable": true,
                     "Value": []
@@ -34,163 +34,99 @@
                 "Arguments": [],
                 "Blocks": [
                   {
-                    "UniqueKey": "ccd0ef82-1901-4e5b-a47f-d7facb92d954",
-                    "Name": "WFEngine.Activities.Console.WriteLine",
+                    "UniqueKey": "f3bc1586-1dbc-49c7-9ec9-8fbbf7134d5c",
+                    "Name": "WFEngine.Activities.Basic.Assign",
                     "IsContainer": false,
-                    "AssemblyName": "WFEngine.Activities.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                    "ActivityName": "WFEngine.Activities.Console.WriteLine",
+                    "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                    "ActivityName": "WFEngine.Activities.Basic.Assign",
                     "Variables": [],
                     "Arguments": [
                       {
-                        "Name": "Message",
-                        "ArgumentType": "System.String",
-                        "IsVariable": false,
-                        "IsConstant": false,
-                        "IsValue": false,
-                        "Value": [ "Yaşınızı Giriniz" ]
-                      }
-                    ],
-                    "Blocks": []
-                  },
-                  {
-                    "UniqueKey": "671d3cf0-7019-4106-9dbd-bc1bd7c5fe8c",
-                    "Name": "WFEngine.Activities.Console.ReadLine",
-                    "IsContainer": false,
-                    "AssemblyName": "WFEngine.Activities.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                    "ActivityName": "WFEngine.Activities.Console.ReadLine",
-                    "Variables": [],
-                    "Arguments": [
-                      {
-                        "Name": "ReturnValue",
+                        "Name": "counter",
                         "ArgumentType": "System.Int32",
                         "IsVariable": true,
                         "IsConstant": false,
-                        "Value": [ "$age" ]
+                        "Value": [
+                          "0"
+                        ]
                       }
                     ],
                     "Blocks": []
                   },
                   {
-                    "UniqueKey": "8127911a-0f0f-4bd5-b18b-41ef90bbc6da",
-                    "Name": "WFEngine.Activities.Basic.Condition.IF",
+                    "UniqueKey": "208c8263-521b-4271-a494-0f4f8a8c5a05",
+                    "Name": "WFEngine.Activities.Basic.While",
                     "IsContainer": false,
                     "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                    "ActivityName": "WFEngine.Activities.Basic.Condition.IF",
+                    "ActivityName": "WFEngine.Activities.Basic.While",
                     "Variables": [],
                     "Arguments": [
                       {
-                        "Name": "WFEngine.Activities.Basic.ConditionGroup",
-                        "ArgumentType": "WFEngine.Activities.Basic.Condition.ConditionGroup",
+                        "Name": "Condition",
+                        "ArgumentType": "WFEngine.Activities.Basic.Condition.ConditionItem",
                         "IsVariable": false,
                         "IsConstant": false,
-                        "IsValue": false,
                         "Value": [
                           {
-                            "ArgumentType": "WFEngine.Activities.Basic.Condition.ConditionGroup",
-                            "ParentConditions": [],
-                            "ConditionItem": {
-                              "LeftItem": {
-                                "Name": "LeftItem",
-                                "ArgumentType": "System.Int32",
-                                "IsVariable": true,
-                                "IsConstant": false,
-                                "IsValue": false,
-                                "Value": [ "$age" ]
-                              },
-                              "RightItem": {
-                                "Name": "RightItem",
-                                "ArgumentType": "System.Int32",
-                                "IsVariable": false,
-                                "IsConstant": false,
-                                "IsValue": true,
-                                "Value": [ "18" ]
-                              },
-                              "Operator": "Is Greater Than Or Equal To"
+                            "LeftItem": {
+                              "Name": "LeftItem",
+                              "ArgumentType": "",
+                              "IsVariable": false,
+                              "IsValue": false,
+                              "IsConstant": false,
+                              "Value": [
+                                "$counter"
+                              ]
                             },
-                            "Operator": "AND",
-                            "Blocks": [
-                              {
-                                "UniqueKey": "17a4bc05-bb52-4a88-a16d-a32c7a1bc234",
-                                "Name": "WFEngine.Activities.Basic.Container",
-                                "IsContainer": true,
-                                "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "ActivityName": "WFEngine.Activities.Basic.Container",
-                                "Variables": [],
-                                "Arguments": [],
-                                "Blocks": [
-                                  {
-                                    "UniqueKey": "0c4f1473-2ce9-4d2f-b49a-c6d8f13954f5",
-                                    "Name": "WFEngine.Activities.Console.WriteLine",
-                                    "IsContainer": false,
-                                    "AssemblyName": "WFEngine.Activities.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                    "ActivityName": "WFEngine.Activities.Console.WriteLine",
-                                    "Variables": [],
-                                    "Arguments": [
-                                      {
-                                        "Name": "Message",
-                                        "ArgumentType": "System.String",
-                                        "IsVariable": false,
-                                        "IsConstant": false,
-                                        "IsValue": false,
-                                        "Value": [ "You can get a driver's license" ]
-                                      }
-                                    ],
-                                    "Blocks": []
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "Name": "WFEngine.Activities.Basic.Condition.Else",
-                        "ArgumentType": "WFEngine.Activities.Basic.Condition.Else",
-                        "IsVariable": false,
-                        "IsConstant": false,
-                        "Value": [
-                          {
-                            "ArgumentType": "WFEngine.Activities.Basic.Condition.Else",
-                            "ParentConditions": [],
-                            "ConditionItem": {},
-                            "Operator": "AND",
-                            "Blocks": [
-                              {
-                                "UniqueKey": "cd7199dd-2bb1-44d6-a957-b2d0b60ea39b",
-                                "Name": "WFEngine.Activities.Basic.Container",
-                                "IsContainer": true,
-                                "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                "ActivityName": "WFEngine.Activities.Basic.Container",
-                                "Variables": [],
-                                "Arguments": [],
-                                "Blocks": [
-                                  {
-                                    "UniqueKey": "6a514575-0803-4d37-af81-ab25a2b4df3c",
-                                    "Name": "WFEngine.Activities.Console.WriteLine",
-                                    "IsContainer": false,
-                                    "AssemblyName": "WFEngine.Activities.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-                                    "ActivityName": "WFEngine.Activities.Console.WriteLine",
-                                    "Variables": [],
-                                    "Arguments": [
-                                      {
-                                        "Name": "Message",
-                                        "ArgumentType": "System.String",
-                                        "IsVariable": false,
-                                        "IsConstant": false,
-                                        "IsValue": false,
-                                        "Value": [ "you can't get a driver's license" ]
-                                      }
-                                    ],
-                                    "Blocks": []
-                                  }
-                                ]
-                              }
-                            ]
+                            "RightItem": {
+                              "Name": "RightItem",
+                              "ArgumentType": "System.Int32",
+                              "IsVariable": false,
+                              "IsConstant": false,
+                              "IsValue": false,
+                              "Value": [
+                                "10"
+                              ]
+                            },
+                            "Operator": "Is Less Than Or Equal To"
                           }
                         ]
                       }
                     ],
-                    "Blocks": []
+                    "Blocks": [
+                      {
+                        "UniqueKey": "c8f810fc-00b9-474d-87b0-89654271bdb9",
+                        "Name": "WFEngine.Activities.Basic.Container",
+                        "IsContainer": true,
+                        "AssemblyName": "WFEngine.Activities.Basic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                        "ActivityName": "WFEngine.Activities.Basic.Container",
+                        "Variables": [],
+                        "Arguments": [],
+                        "Blocks": [
+                          {
+                            "UniqueKey": "53137843-4b06-4578-a439-3098e0d49a58",
+                            "Name": "WFEngine.Activities.Console.WriteLine",
+                            "IsContainer": false,
+                            "AssemblyName": "WFEngine.Activities.Console, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+                            "ActivityName": "WFEngine.Activities.Console.WriteLine",
+                            "Variables": [],
+                            "Arguments": [
+                              {
+                                "Name": "Message",
+                                "ArgumentType": "System.String",
+                                "IsVariable": false,
+                                "IsConstant": false,
+                                "IsValue": false,
+                                "Value": [
+                                  "Merhaba"
+                                ]
+                              }
+                            ],
+                            "Blocks": []
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
